@@ -2,10 +2,13 @@
 
 FoldingCell impl in JavaScript.
 
-#### Read it on Medium
+### Read it on Medium
 
 This project was inspired by the FoldingCell animation seen on [Behance](https://www.behance.net/gallery/22981559/Mobile-Interaction-Design).
 To learn more, check out the article on Medium: [Implementing FoldView in React Native](https://commitocracy.com/).
+
+#### Questions?
+Feel free to reach out to me on Twitter [@jmurzy](https://twitter.com/jmurzy).
 
 ### Example
 The example app from the GIF in the README can be found at `examples/Simple`. You can also [view it with Exponent](https://exp.host/@jmurzy/react-native-foldview-simple).
@@ -32,9 +35,23 @@ $ yarn add react-native-foldview
 ### Platform Support
 This library heavily depends on the `overflow` style property. Unfortunately, `overflow` defaults to `hidden` on Android and cannot be changed. Although it looks like a [possible fix](https://github.com/facebook/react-native/issues/3198#issuecomment-241867280) is in the making, currently, FoldingView is only supported on iOS.
 
+
 ### Contributing
 Contributions are very welcome: bug fixes, features, documentation, tests. Just make sure the CI is 👌.
 
-### Questions?
+<a name="hacking"/>
+#### Hacking
 
-Feel free to reach out to me on Twitter [@jmurzy](https://twitter.com/jmurzy).
+Unfortunately, React Native packager does not support symlinking so you cannot use [`npm link`](https://docs.npmjs.com/cli/link) when hacking on this library. You can learn more about that, [here](https://productpains.com/post/react-native/symlink-support-for-packager/).
+
+The library code is specified as a [local dependency](local dependency) in the example's `package.json`. In order to hack on the library code, you need to sync it into `examples/Simple/node_modules`. To do so, run:
+
+```js
+npm run watch
+```
+
+This will automatically watch the `src` directory and sync your changes into `examples/Simple/node_modules` every time something changes.
+
+<a name="license"/>
+#### License
+All pull requests that get merged will be made available under [the MIT license](https://github.com/jmurzy/react-router-native/blob/master/LICENSE.md), as the rest of the repository.
