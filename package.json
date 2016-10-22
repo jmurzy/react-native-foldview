@@ -40,10 +40,9 @@
     "node": ">=4.0.0"
   },
   "scripts": {
-    "test": "npm run spec && npm run lint && npm run flow",
+    "test": "npm run spec && npm run lint",
     "spec": "./node_modules/.bin/babel-node ./node_modules/.bin/gulp spec",
     "lint": "./node_modules/.bin/babel-node ./node_modules/.bin/gulp lint",
-    "flow": "./node_modules/.bin/flow check",
     "watch": "./node_modules/.bin/babel-node ./node_modules/.bin/gulp watch"
   },
   "repository": {
