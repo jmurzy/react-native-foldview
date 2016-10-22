@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 5.1.0
+
+dependencies:
+  pre:
+    - npm install -g npm@3.3.12
+
+test:
+  override:
+    - npm test
