@@ -21,7 +21,7 @@ The example app from the GIF in the README can be found at `examples/Simple`. Yo
 $ npm install --save react-native-foldview
 ```
 
-— or —
+#### Using yarn:
 
 ```sh
 $ yarn add react-native-foldview
