@@ -1,0 +1,44 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "globals": {
+    // Flow global types
+    "ReactComponent": false,
+    "ReactClass": false,
+    "ReactElement": false,
+    "ReactPropsCheckType": false,
+    "ReactPropsChainableTypeChecker": false,
+    "ReactPropTypes": false,
+    "SyntheticEvent": false,
+    "$Either": false,
+    "$All": false,
+    "$Tuple": false,
+    "$Supertype": false,
+    "$Subtype": false,
+    "$Shape": false,
+    "$Diff": false,
+    "$Keys": false,
+    "$Enum": false,
+    "$Exports": false,
+    "$FlowIssue": false,
+    "$FlowFixMe": false,
+    "$FixMe": false,
+    // Polyfill
+    "requestAnimationFrame": false,
+  },
+  "rules": {
+    // TODO: Remove this override when airbnb bumps `import` to v1.14.0
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": true,
+        "peerDependencies": true
+      },
+    ],
+    "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
+    "react/no-unused-prop-types": ["off"],
+    "react/forbid-prop-types": ["off"],
+    "class-methods-use-this": ["off"],
+    "arrow-parens": ["off"],
+    "no-underscore-dangle": [2, { allowAfterThis: true }],
+  }
+}

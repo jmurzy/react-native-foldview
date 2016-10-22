@@ -1,0 +1,86 @@
+{
+  "name": "react-native-foldview",
+  "version": "0.0.1",
+  "description": "FoldingCell impl in JavaScript",
+  "main": "src/index",
+  "jsnext:main": "src/index",
+  "files": [
+    "*.md",
+    "src"
+  ],
+  "author": "Jake Murzy <jake@murzy>",
+  "license": "MIT",
+  "homepage": "https://github.com/jmurzy/react-native-foldview",
+  "tags": [
+    "react",
+    "react-native",
+    "FoldView",
+    "FoldingCell",
+    "ListView",
+    "ScrollView"
+  ],
+  "keywords": [
+    "react",
+    "react-native",
+    "native",
+    "ios",
+    "andorid",
+    "FoldingCell",
+    "folding",
+    "cell",
+    "view"
+  ],
+  "contributors": [
+    {
+      "name": "Jake Murzy",
+      "email": "jake@murzy"
+    }
+  ],
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {
+    "test": "npm run spec && npm run lint && npm run flow",
+    "spec": "./node_modules/.bin/babel-node ./node_modules/.bin/gulp spec",
+    "lint": "./node_modules/.bin/babel-node ./node_modules/.bin/gulp lint",
+    "flow": "./node_modules/.bin/flow check",
+    "watch": "./node_modules/.bin/babel-node ./node_modules/.bin/gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmurzy/react-native-foldview.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmurzy/react-native-foldview/issues"
+  },
+  "peerDependencies": {
+    "react-native": "0.36.0-rc.1"
+  },
+  "dependencies": {
+    "invariant": "^2.2.1",
+    "warning": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.8.0",
+    "babel-eslint": "^7.0.0",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-react-native": "^1.9.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.0.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-flowtype": "^2.3.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
+    "eslint-plugin-react": "^6.2.0",
+    "flow-bin": "^0.33.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
+    "react": "~15.3.1",
+    "react-native": "0.36.0-rc.1",
+    "react-native-mock": "^0.2.5",
+    "rimraf": "^2.5.2",
+    "run-sequence": "^1.2.2"
+  }
+}
