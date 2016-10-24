@@ -1,6 +1,6 @@
 {
   "name": "react-native-foldview",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "FoldingCell impl in JavaScript",
   "main": "src/index",
   "jsnext:main": "src/index",
