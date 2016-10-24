@@ -1,0 +1,17 @@
+{
+  "name": "React Native FoldView Example",
+  "description": "FoldView demo",
+  "orientation": "portrait",
+  "primaryColor": "#52637C",
+  "sdkVersion": "10.0.0",
+  "slug": "react-native-foldview-example-simple",
+  "version": "0.0.1",
+  "loading": {
+    "hideExponentText": false
+  },
+  "packagerOpts": {
+    "assetExts": [
+      "ttf"
+    ]
+  }
+}
