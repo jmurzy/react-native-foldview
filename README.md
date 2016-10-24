@@ -4,7 +4,7 @@ FoldingCell impl in JavaScript.
 
 ### Read it on Medium
 
-This project was inspired by the FoldingCell animation seen on [Behance](https://www.behance.net/gallery/22981559/Mobile-Interaction-Design).
+This project was inspired by the FoldingCell animation seen on [Dribbble](https://dribbble.com/shots/2121350-Delivery-Card).
 To learn more, check out the article on Medium: [Implementing FoldView in React Native](https://commitocracy.com/).
 
 #### Questions?
