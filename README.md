@@ -2,6 +2,9 @@
 
 FoldingCell impl in JavaScript.
 
+
+<img align="right" width="360px" src="https://raw.githubusercontent.com/jmurzy/react-native-foldview/master/.github/screenshot.gif">
+
 ### Read it on Medium
 
 This project was inspired by the FoldingCell animation seen on [Dribbble](https://dribbble.com/shots/2121350-Delivery-Card).
@@ -11,7 +14,25 @@ To learn more, check out the article on Medium: [Implementing FoldView in ReactÂ
 Feel free to reach out to me on Twitter [@jmurzy](https://twitter.com/jmurzy).
 
 ### Example
-The example app from the GIF in the README can be found at `examples/Simple`. You can also [view it with Exponent](https://exp.host/@jmurzy/react-native-foldview-simple).
+The demo app from the GIF can be found at `examples/Simple`.
+
+To build and run the example app:
+
+```bash
+git clone https://github.com/jmurzy/react-native-foldview
+
+cd react-native-foldview/examples/Simple
+npm install
+```
+
+To deploy to iOS simulator:
+
+```bash
+npm run ios
+```
+
+Or, you can [view it with Exponent](
+https://exp.host/@jmurzy/react-native-foldview-example-simple).
 
 ### Installation
 
@@ -44,7 +65,7 @@ $ yarn add react-native-foldview
 
 #### Root-only Props
 
-The following props can only be set on the root `FoldView`.
+FoldViews can be nested. The following props can only be set on the root `FoldView`.
 
 | Prop | Type | Description |
 |---|---|---|
@@ -57,7 +78,6 @@ The following props can only be set on the root `FoldView`.
 
 ### Platform Support
 This library heavily depends on the `overflow` style property. Unfortunately, `overflow` defaults to `hidden` on Android and cannot be changed. Although it looks like a [possible fix](https://github.com/facebook/react-native/issues/3198#issuecomment-241867280) is in the making, currently, FoldingView is only supported on iOS.
-
 
 ### Contributing
 Contributions are very welcome: bug fixes, features, documentation, tests. Just make sure the CI is ðŸ‘Œ.
