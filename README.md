@@ -32,6 +32,29 @@ $ yarn add react-native-foldview
 ```javascript
 ```
 
+#### Props
+
+| Prop | Type | Description |
+|---|---|---|
+|**`children`**|`ReactElement<any>`|React Element(s) to render.|
+|**`flipDuration`**|`?number`|Length of flip animation in milliseconds. _Default 280._|
+|**`renderBackface`**|`() => ReactElement<any>`|Callback that renders a backface.|
+|**`renderFrontface`**|`() => ReactElement<any>`|Callback that renders a frontface.|
+|**`renderLoading`**|`?() => ReactElement<any>`|Callback that renders a temporary view to display before base layout occurs. If not provided, `renderFrontface` is used instead.|
+
+#### Root-only Props
+
+The following props can only be set on the root `FoldView`.
+
+| Prop | Type | Description |
+|---|---|---|
+|**`collapse`**|`?(foldviews: Array<FoldView>) => Promise`|Called when FoldView should collapse allowing you to have control over which FoldViews(s) to collapse. Default behavior is to wait until a FoldView is collapsed before collapsing the next one.|
+|**`expand`**|`?(foldviews: Array<FoldView>) => Promise`|Called when FoldView should expand allowing you to have control over which FoldView(s) to expand. Default behavior is to wait until a FoldView is expanded before expanding the next one.|
+|**`expanded`**|`boolean`|Allows you to expand and collapse the FoldView content.|
+|**`onAnimatationEnd`**|`?() => void`|Called when a collapse animation ends.|
+|**`onAnimatationStart`**|`?() => void`|Called before an expand animation starts.|
+|**`perspective`**|`?number`|Defines the space within which the 3D animation occurs.|
+
 ### Platform Support
 This library heavily depends on the `overflow` style property. Unfortunately, `overflow` defaults to `hidden` on Android and cannot be changed. Although it looks like a [possible fix](https://github.com/facebook/react-native/issues/3198#issuecomment-241867280) is in the making, currently, FoldingView is only supported on iOS.
 
