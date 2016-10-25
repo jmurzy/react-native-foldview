@@ -118,7 +118,7 @@ FoldViews can be nested. The following props can only be set on the root `FoldVi
 
 | Prop | Type | Description |
 |---|---|---|
-|**`collapse`**|`?(foldviews: Array<FoldView>) => Promise`|Called when FoldView should collapse allowing you to have control over which FoldViews(s) to collapse. Default behavior is to wait until a FoldView is collapsed before collapsing the next one.|
+|**`collapse`**|`?(foldviews: Array<IFoldView>) => Promise`|Called when FoldView should collapse allowing you to have control over which FoldViews(s) to collapse. Default behavior is to wait until a FoldView is collapsed before collapsing the next one.|
 |**`expand`**|`?(foldviews: Array<IFoldView>) => Promise`|Called when FoldView should expand allowing you to have control over which FoldView(s) to expand. Default behavior is to wait until a FoldView is expanded before expanding the next one.|
 |**`expanded`**|`boolean`|Allows you to expand and collapse the FoldView content.|
 |**`onAnimationEnd`**|`?(duration: number, height: number) => void`|Called when a collapse animation ends.|
