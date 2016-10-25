@@ -42,7 +42,7 @@ $ yarn add react-native-foldview
 
 ### Usage
 
-```javascript
+```jsx
 import React, { Component } from 'react';
 
 import FoldView from 'react-native-foldview';
@@ -121,14 +121,14 @@ FoldViews can be nested. The following props can only be set on the root `FoldVi
 |**`collapse`**|`?(foldviews: Array<FoldView>) => Promise`|Called when FoldView should collapse allowing you to have control over which FoldViews(s) to collapse. Default behavior is to wait until a FoldView is collapsed before collapsing the next one.|
 |**`expand`**|`?(foldviews: Array<IFoldView>) => Promise`|Called when FoldView should expand allowing you to have control over which FoldView(s) to expand. Default behavior is to wait until a FoldView is expanded before expanding the next one.|
 |**`expanded`**|`boolean`|Allows you to expand and collapse the FoldView content.|
-|**`onAnimationEnd`**|`?() => void`|Called when a collapse animation ends.|
-|**`onAnimationStart`**|`?() => void`|Called before an expand animation starts.|
+|**`onAnimationEnd`**|`?(duration: number, height: number) => void`|Called when a collapse animation ends.|
+|**`onAnimationStart`**|`?(duration: number, height: number) => void`|Called before an expand animation starts.|
 |**`perspective`**|`?number`|Defines the space within which the 3D animation occurs.|
 
 ### Advanced Usage
 You can customize the behavior of expand and collapse animations using the `expand` and `collapse` props on the root `FoldView`. For example, it's very much possible to collapse all FoldViews in a given stack altogether rather than one by one. You can do so as follows:
 
-```javascript
+```jsx
 const collapse = async (foldViews) => {
   /**
    * Internally, FoldView turns off rasterization when collapsed as an optimization to decrease
