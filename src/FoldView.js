@@ -64,8 +64,8 @@ export default class FoldingCell extends Component {
     collapse: PropTypes.func,
     expand: PropTypes.func,
     expanded: PropTypes.bool,
-    onAnimatationEnd: PropTypes.func,
-    onAnimatationStart: PropTypes.func,
+    onAnimationEnd: PropTypes.func,
+    onAnimationStart: PropTypes.func,
     perspective: PropTypes.number,
   };
 
@@ -120,8 +120,8 @@ export default class FoldingCell extends Component {
         'collapse',
         'expand',
         'expanded',
-        'onAnimatationEnd',
-        'onAnimatationStart',
+        'onAnimationEnd',
+        'onAnimationStart',
         'perspective',
       ];
 
@@ -285,8 +285,8 @@ export default class FoldingCell extends Component {
       );
     }
 
-    if (this.props.onAnimatationStart) {
-      this.props.onAnimatationStart(totalDuration, height);
+    if (this.props.onAnimationStart) {
+      this.props.onAnimationStart(totalDuration, height);
     }
 
     if (expanded) {
@@ -306,8 +306,8 @@ export default class FoldingCell extends Component {
       }
     }
 
-    if (this.props.onAnimatationEnd) {
-      this.props.onAnimatationEnd(totalDuration, height);
+    if (this.props.onAnimationEnd) {
+      this.props.onAnimationEnd(totalDuration, height);
     }
   }
 
