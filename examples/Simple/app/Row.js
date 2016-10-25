@@ -81,7 +81,7 @@ export default class Row extends Component {
       >
         <FoldView
           expanded={this.state.expanded}
-          onAnimatationStart={this.handleAnimationStart}
+          onAnimationStart={this.handleAnimationStart}
           perspective={1000}
           renderBackface={this.renderBackface}
           renderFrontface={this.renderFrontface}
