@@ -77,8 +77,8 @@ export default class FoldingCell extends Component {
     super(props, context);
 
     this.state = {
-      rotateYfront: new Animated.Value(0),
-      rotateYback: new Animated.Value(-180),
+      rotateXfront: new Animated.Value(0),
+      rotateXback: new Animated.Value(-180),
       baseLayout: null,
       rasterize: false,
     };
@@ -140,11 +140,11 @@ export default class FoldingCell extends Component {
   }
 
   componentDidMount() {
-    this.state.rotateYfront.addListener(({ value }) => {
+    this.state.rotateXfront.addListener(({ value }) => {
       this.flushTransform(this.frontFaceRef, value, this.state.frontFaceOriginY);
     });
 
-    this.state.rotateYback.addListener(({ value }) => {
+    this.state.rotateXback.addListener(({ value }) => {
       this.flushTransform(this.backFaceRef, value, this.state.backFaceOriginY);
     });
 
@@ -204,9 +204,9 @@ export default class FoldingCell extends Component {
     return this.props.flipDuration;
   }
 
-  flushTransform(ref, dy, y) {
+  flushTransform(ref, dx, y) {
     // Matrix multiplication is not commutative
-    const matrix = transformUtil.rotateY(dy);
+    const matrix = transformUtil.rotateX(dx);
     transformUtil.origin(matrix, { x: 0, y, z: 0 });
 
     const perspective = this.props.perspective || rootDefaultProps.perspective;
@@ -229,11 +229,11 @@ export default class FoldingCell extends Component {
     const duration = this.props.flipDuration;
 
     const animations = Animated.parallel([
-      Animated.timing(this.state.rotateYfront, {
+      Animated.timing(this.state.rotateXfront, {
         toValue: 180,
         duration,
       }),
-      Animated.timing(this.state.rotateYback, {
+      Animated.timing(this.state.rotateXback, {
         toValue: 0,
         duration,
       }),
@@ -246,11 +246,11 @@ export default class FoldingCell extends Component {
     const duration = this.props.flipDuration;
 
     const animations = Animated.parallel([
-      Animated.timing(this.state.rotateYfront, {
+      Animated.timing(this.state.rotateXfront, {
         toValue: 0,
         duration,
       }),
-      Animated.timing(this.state.rotateYback, {
+      Animated.timing(this.state.rotateXback, {
         toValue: -180,
         duration,
       }),
@@ -322,7 +322,7 @@ export default class FoldingCell extends Component {
       this.flushTransform(
         this.frontFaceRef,
         /* eslint-disable no-underscore-dangle */
-        this.state.rotateYfront.__getValue(),
+        this.state.rotateXfront.__getValue(),
         /* eslint-enable */
         this.state.frontFaceOriginY
       );
@@ -330,7 +330,7 @@ export default class FoldingCell extends Component {
       this.flushTransform(
         this.backFaceRef,
         /* eslint-disable no-underscore-dangle */
-        this.state.rotateYback.__getValue(),
+        this.state.rotateXback.__getValue(),
         /* eslint-enable */
         this.state.backFaceOriginY
       );

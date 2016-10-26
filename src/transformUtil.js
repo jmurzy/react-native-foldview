@@ -12,7 +12,7 @@ function transformOrigin(matrix, origin) {
   MatrixMath.multiplyInto(matrix, matrix, untranslate);
 }
 
-function rotateY(deg) {
+function rotateX(deg) {
   const rad = (Math.PI / 180) * deg;
   const cos = Math.cos(rad);
   const sin = Math.sin(rad);
@@ -25,6 +25,6 @@ function rotateY(deg) {
 }
 
 export default {
-  rotateY,
+  rotateX,
   origin: transformOrigin,
 };
