@@ -28,6 +28,7 @@
   },
   "rules": {
     // TODO: Remove this override when airbnb bumps `import` to v1.14.0
+    "flowtype-errors/show-errors": 2,
     "import/no-extraneous-dependencies": [
       "error", {
         "devDependencies": true,
@@ -40,5 +41,6 @@
     "class-methods-use-this": ["off"],
     "arrow-parens": ["off"],
     "no-underscore-dangle": [2, { allowAfterThis: true }],
-  }
+  },
+  "plugins": ["flowtype-errors"]
 }

@@ -37,9 +37,11 @@
     }
   ],
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=4",
+    "npm": ">=3"
   },
   "scripts": {
+    "flow-typed": "flow-typed install",
     "test": "npm run spec && npm run lint",
     "spec": "./node_modules/.bin/babel-node ./node_modules/.bin/gulp spec",
     "lint": "./node_modules/.bin/babel-node ./node_modules/.bin/gulp lint",
@@ -62,24 +64,26 @@
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.0",
-    "babel-eslint": "^7.0.0",
-    "babel-polyfill": "^6.9.1",
+    "babel-eslint": "^7.1.0",
+    "babel-polyfill": "^6.16.0",
     "babel-preset-react-native": "^1.9.0",
     "chai": "^3.5.0",
-    "eslint": "^3.0.1",
+    "eslint": "^3.9.0",
     "eslint-config-airbnb": "^12.0.0",
-    "eslint-plugin-flowtype": "^2.24.0",
+    "eslint-plugin-flowtype": "^2.25.0",
+    "eslint-plugin-flowtype-errors": "1.5.0",
     "eslint-plugin-import": "^2.0.1",
-    "eslint-plugin-jsx-a11y": "^2.2.1",
-    "eslint-plugin-react": "^6.2.0",
-    "flow-bin": "^0.33.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "flow-bin": "^0.34.0",
+    "flow-typed": "^2.0.0",
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-mocha": "^3.0.1",
-    "react": "~15.3.1",
+    "react": "~15.3.2",
     "react-native": "0.36.0",
-    "react-native-mock": "^0.2.5",
-    "rimraf": "^2.5.2",
+    "react-native-mock": "^0.2.7",
+    "rimraf": "^2.5.4",
     "run-sequence": "^1.2.2"
   }
 }
