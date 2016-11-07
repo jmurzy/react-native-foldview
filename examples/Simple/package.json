@@ -9,9 +9,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "exponent": "^10.0.4",
+    "exponent": "^11.0.0",
     "react": "15.3.1",
-    "react-native": "github:exponentjs/react-native#sdk-10.0.0",
+    "react-native": "github:exponentjs/react-native#sdk-11.0.0",
     "react-native-foldview": "file:../../"
   },
   "jest": {
