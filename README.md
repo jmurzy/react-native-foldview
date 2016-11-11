@@ -1,4 +1,4 @@
-# React Native FoldView [![CircleCI](https://img.shields.io/circleci/project/jmurzy/react-native-foldview/master.svg?style=flat-square)](https://circleci.com/gh/jmurzy/react-native-foldview) [![npm version](https://img.shields.io/npm/v/react-native-foldview.svg?style=flat-square)](https://www.npmjs.com/package/react-native-foldview) [![npm](https://img.shields.io/npm/l/react-native-foldview.svg?style=flat-square)](https://github.com/jmurzy/react-native-foldview/blob/master/LICENSE.md)
+# React Native FoldView [![Medium](https://img.shields.io/badge/blog-medium-brightgreen.svg)](https://commitocracy.com/implementing-foldview-in-react-native-e970011f98b8) [![CircleCI](https://img.shields.io/circleci/project/jmurzy/react-native-foldview/master.svg?style=flat-square)](https://circleci.com/gh/jmurzy/react-native-foldview) [![npm version](https://img.shields.io/npm/v/react-native-foldview.svg?style=flat-square)](https://www.npmjs.com/package/react-native-foldview) [![npm](https://img.shields.io/npm/l/react-native-foldview.svg?style=flat-square)](https://github.com/jmurzy/react-native-foldview/blob/master/LICENSE.md)
 
 FoldingCell implementation in JavaScript. This project was inspired by the folding cell animation seen on [Dribbble](https://dribbble.com/shots/2121350-Delivery-Card).
 
@@ -7,6 +7,9 @@ FoldingCell implementation in JavaScript. This project was inspired by the foldi
 
 #### Questions?
 Feel free to reach out to me on Twitter [@jmurzy](https://twitter.com/jmurzy).
+
+### Read it on Medium
+To learn more about how FoldView was implemented, check out the article on Medium: [Implementing FoldView in React Native](https://commitocracy.com/implementing-foldview-in-react-native-e970011f98b8).
 
 ### Example
 The demo app from the GIF can be found at `examples/Simple`.
