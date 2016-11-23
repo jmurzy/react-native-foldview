@@ -417,9 +417,9 @@ export default class FoldingCell extends Component {
     if (this.isRoot && !this.state.baseLayout) {
       // Unless `renderLoading` is provided, temporarily render `frontFace` as placeholder
       // to avoid shutter when layout is done.
-      const renderPalceholder = this.props.renderLoading || this.props.renderFrontface;
-      if (renderPalceholder) {
-        children = renderPalceholder();
+      const renderPlaceholder = this.props.renderLoading || this.props.renderFrontface;
+      if (renderPlaceholder) {
+        children = renderPlaceholder();
       }
     }
 
