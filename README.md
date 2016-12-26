@@ -171,4 +171,4 @@ This will automatically watch the `src` directory and sync your changes into `ex
 
 <a name="license"/>
 #### License
-All pull requests that get merged will be made available under [the MIT license](https://github.com/jmurzy/react-router-native/blob/master/LICENSE.md), as the rest of the repository.
+All pull requests that get merged will be made available under [the MIT license](https://github.com/jmurzy/react-native-foldview/blob/master/LICENSE.md), as the rest of the repository.
