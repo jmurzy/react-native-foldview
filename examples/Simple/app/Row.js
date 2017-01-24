@@ -4,6 +4,7 @@ import React, {
 
 import {
   LayoutAnimation,
+  UIManager,
   View,
 } from 'react-native';
 
@@ -12,6 +13,11 @@ import FoldView from 'react-native-foldview';
 import InfoCard from './components/InfoCard';
 import PhotoCard from './components/PhotoCard';
 import ProfileCard from './components/ProfileCard';
+
+// Enable LayoutAnimation on Android
+if (UIManager.setLayoutAnimationEnabledExperimental) {
+  UIManager.setLayoutAnimationEnabledExperimental(true);
+}
 
 const ROW_HEIGHT = 180;
 
