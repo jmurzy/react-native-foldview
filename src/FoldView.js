@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   },
 });
 
+/* eslint-disable no-restricted-syntax, no-await-in-loop */
 const rootDefaultProps = {
   collapse: async (foldViews) => {
     const reversedFoldViews = [...foldViews].reverse();
@@ -43,6 +44,7 @@ const rootDefaultProps = {
   },
   perspective: 1000,
 };
+/* eslint-enable */
 
 export default class FoldingCell extends Component {
 
@@ -134,7 +136,7 @@ export default class FoldingCell extends Component {
 
       invariant(
         invalidProps.length === 0,
-        `${invalidProps.join(', ')} cannot be set on a nested FoldView`
+        `${invalidProps.join(', ')} cannot be set on a nested FoldView`,
       );
     }
   }
@@ -274,14 +276,14 @@ export default class FoldingCell extends Component {
 
     const totalDuration = this.managedComponents.reduce(
       (total, pseudoRef) => total + pseudoRef.getFlipDuration(),
-      0
+      0,
     );
 
     let height = this.state.baseLayout.height;
     if (expanded) {
       height = this.managedComponents.reduce(
         (total, pseudoRef) => total + pseudoRef.getBaseHeight(),
-        height
+        height,
       );
     }
 
@@ -290,9 +292,11 @@ export default class FoldingCell extends Component {
     }
 
     if (expanded) {
+      /* eslint-disable no-restricted-syntax, no-await-in-loop */
       for (const pseudoRef of this.managedComponents) {
         await pseudoRef.rasterize(true);
       }
+      /* eslint-enable */
 
       const expand = this.props.expand || rootDefaultProps.expand;
       await expand(this.managedComponents);
@@ -301,9 +305,11 @@ export default class FoldingCell extends Component {
       await collapse(this.managedComponents);
 
       // Conserve memory by turning off rasterization on collapse
+      /* eslint-disable no-restricted-syntax, no-await-in-loop */
       for (const pseudoRef of this.managedComponents) {
         await pseudoRef.rasterize(false);
       }
+      /* eslint-enable */
     }
 
     if (this.props.onAnimationEnd) {
@@ -324,7 +330,7 @@ export default class FoldingCell extends Component {
         /* eslint-disable no-underscore-dangle */
         this.state.rotateXfront.__getValue(),
         /* eslint-enable */
-        this.state.frontFaceOriginY
+        this.state.frontFaceOriginY,
       );
 
       this.flushTransform(
@@ -332,7 +338,7 @@ export default class FoldingCell extends Component {
         /* eslint-disable no-underscore-dangle */
         this.state.rotateXback.__getValue(),
         /* eslint-enable */
-        this.state.backFaceOriginY
+        this.state.backFaceOriginY,
       );
     });
   }

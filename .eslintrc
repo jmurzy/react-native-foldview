@@ -27,16 +27,10 @@
     "requestAnimationFrame": false,
   },
   "rules": {
-    // TODO: Remove this override when airbnb bumps `import` to v1.14.0
-    "import/no-extraneous-dependencies": [
-      "error", {
-        "devDependencies": true,
-        "peerDependencies": true
-      },
-    ],
     "react/jsx-filename-extension": ["error", { "extensions": [".js"] }],
     "react/no-unused-prop-types": ["off"],
     "react/forbid-prop-types": ["off"],
+    "react/require-default-props": ["off"],
     "class-methods-use-this": ["off"],
     "arrow-parens": ["off"],
     "no-underscore-dangle": [2, { allowAfterThis: true }],

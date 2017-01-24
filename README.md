@@ -151,7 +151,7 @@ const collapse = async (foldViews) => {
 ```
 
 ### Platform Support
-This library heavily depends on the `overflow` style property. Unfortunately, `overflow` defaults to `hidden` on Android and cannot be changed. Although it looks like a [possible fix](https://github.com/facebook/react-native/issues/3198#issuecomment-241867280) is in the making, currently, FoldingView is only supported on iOS.
+This library heavily depends on the `overflow` style property. Unfortunately, `overflow` defaults to `hidden` on Android and cannot be changed. Although it looks like a [possible](https://github.com/facebook/react-native/issues/3198#issuecomment-241867280) [fix](https://github.com/facebook/react-native/tree/master/ReactAndroid/src/main/java/com/facebook/react/flat) is in the making, currently, FoldingView is only supported on iOS.
 
 ### Contributing
 Contributions are very welcome: bug fixes, features, documentation, tests. Just make sure the CI is 👌.

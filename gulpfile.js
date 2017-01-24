@@ -19,7 +19,7 @@ gulp.task('lint', () => gulp
      ])
     .pipe(gulpESlint())
     .pipe(gulpESlint.format())
-    .pipe(gulpESlint.failAfterError())
+    .pipe(gulpESlint.failAfterError()),
 );
 
 gulp.task('spec', () =>
@@ -36,15 +36,15 @@ gulp.task('copy', () =>
     `${SRCDIR}/**/*.js`,
   ])
   .pipe(gulp.dest(
-    `examples/Simple/node_modules/react-native-foldview/${SRCDIR}`
-  ))
+    `examples/Simple/node_modules/react-native-foldview/${SRCDIR}`,
+  )),
 );
 
 gulp.task('default', done => {
   runSequence(
     'spec',
     'lint',
-    done
+    done,
    );
 });
 
