@@ -53,8 +53,8 @@
     "url": "https://github.com/jmurzy/react-native-foldview/issues"
   },
   "peerDependencies": {
-    "react": "~15.3.1",
-    "react-native": "0.36.0"
+    "react": "^15.4.2",
+    "react-native": "0.40.0"
   },
   "dependencies": {
     "invariant": "^2.2.2",
@@ -77,8 +77,8 @@
     "gulp": "^3.9.1",
     "gulp-eslint": "^3.0.1",
     "gulp-mocha": "^3.0.1",
-    "react": "~15.3.1",
-    "react-native": "0.36.0",
+    "react": "^15.4.2",
+    "react-native": "0.40.0",
     "rimraf": "^2.5.2",
     "run-sequence": "^1.2.2"
   }
