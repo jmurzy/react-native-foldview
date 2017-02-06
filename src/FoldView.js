@@ -142,12 +142,16 @@ export default class FoldingCell extends Component {
   }
 
   componentDidMount() {
-    this.state.rotateXfront.addListener(({ value }) => {
-      this.flushTransform(this.frontFaceRef, value, this.state.frontFaceOriginY);
+    this.state.rotateYfront.addListener(({ value }) => {
+        if(this.frontFaceRef) {
+          this.flushTransform(this.frontFaceRef, value, this.state.frontFaceOriginY);
+        }
     });
 
-    this.state.rotateXback.addListener(({ value }) => {
-      this.flushTransform(this.backFaceRef, value, this.state.backFaceOriginY);
+    this.state.rotateYback.addListener(({ value }) => {
+      if(this.backFaceRef) {
+        this.flushTransform(this.backFaceRef, value, this.state.backFaceOriginY);
+      }
     });
 
     // Only expose a subset of self `ref`
