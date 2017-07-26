@@ -156,7 +156,6 @@ This library heavily depends on the `overflow` style property. Unfortunately, `o
 ### Contributing
 Contributions are very welcome: bug fixes, features, documentation, tests. Just make sure the CI is 👌.
 
-<a name="hacking"/>
 #### Hacking
 
 Unfortunately, React Native packager does not support symlinking so you cannot use [`npm link`](https://docs.npmjs.com/cli/link) when hacking on this library. You can learn more about that, [here](https://productpains.com/post/react-native/symlink-support-for-packager/).
@@ -169,6 +168,6 @@ npm run watch
 
 This will automatically watch the `src` directory and sync your changes into `examples/Simple/node_modules` every time something changes.
 
-<a name="license"/>
 #### License
+
 All pull requests that get merged will be made available under [the MIT license](https://github.com/jmurzy/react-native-foldview/blob/master/LICENSE.md), as the rest of the repository.
