@@ -1,6 +1,5 @@
 import React, {
   Component,
-  PropTypes,
 } from 'react';
 
 import {
@@ -9,6 +8,8 @@ import {
   StyleSheet,
   Platform,
 } from 'react-native';
+
+import PropTypes from 'prop-types';
 
 import invariant from 'invariant';
 
