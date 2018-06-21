@@ -58,6 +58,7 @@
   },
   "dependencies": {
     "invariant": "^2.2.2",
+    "prop-types": "^15.6.2",
     "warning": "^3.0.0"
   },
   "devDependencies": {
