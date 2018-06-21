@@ -1,7 +1,8 @@
 import React, {
   Component,
-  PropTypes,
 } from 'react';
+
+import PropTypes from 'prop-types';
 
 import {
   View,
@@ -439,7 +440,7 @@ export default class FoldingCell extends Component {
         onLayout={this.handleBaseLayout}
         style={baseStyle}
       >
-        { children }
+        {children}
       </View>
     );
   }
@@ -447,9 +448,9 @@ export default class FoldingCell extends Component {
   render() {
     return (
       <View style={styles.container}>
-        { this.renderBase() }
-        { this.renderBackface() }
-        { this.renderFrontface() }
+        {this.renderBase()}
+        {this.renderBackface()}
+        {this.renderFrontface()}
       </View>
     );
   }
