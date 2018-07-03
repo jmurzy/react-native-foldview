@@ -209,17 +209,18 @@ export default class FoldingCell extends Component {
 
   flushTransform(ref, dx, y) {
     // Matrix multiplication is not commutative
-    const matrix = transformUtil.rotateX(dx);
+    const matrix = transformUtil.createIdentityMatrix();
+    const rotate = transformUtil.rotateX(dx);
     transformUtil.origin(matrix, { x: 0, y, z: 0 });
-
-    const perspective = this.props.perspective || rootDefaultProps.perspective;
+    transformUtil.applyPerspective(
+      matrix,
+      this.props.perspective || rootDefaultProps.perspective,
+    );
+    transformUtil.multiplyInto(matrix, matrix, rotate);
 
     ref.setNativeProps({
       style: {
         transform: [
-          {
-            perspective,
-          },
           {
             matrix,
           },
