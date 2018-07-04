@@ -24,7 +24,16 @@ function rotateX(deg) {
   ];
 }
 
+function applyPerspective(matrix, value) {
+  const perspective = MatrixMath.createIdentityMatrix();
+  MatrixMath.reusePerspectiveCommand(perspective, value);
+  MatrixMath.multiplyInto(matrix, matrix, perspective);
+}
+
 export default {
   rotateX,
+  applyPerspective,
+  createIdentityMatrix: MatrixMath.createIdentityMatrix,
+  multiplyInto: MatrixMath.multiplyInto,
   origin: transformOrigin,
 };
